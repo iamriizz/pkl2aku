@@ -1,0 +1,14 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="36" fill="#FFF7EF"/>
+  <rect x="150" y="120" width="500" height="330" rx="26" fill="#FFFFFF"/>
+  <rect x="220" y="180" width="300" height="210" rx="22" fill="#F4C68C"/>
+  <rect x="250" y="210" width="240" height="150" rx="20" fill="#FFF3E7"/>
+  <ellipse cx="370" cy="285" rx="90" ry="48" fill="#E2562A"/>
+  <circle cx="330" cy="285" r="18" fill="#C43717"/>
+  <circle cx="410" cy="285" r="18" fill="#C43717"/>
+  <path d="M300 160 C330 120, 410 120, 440 160" stroke="#F2A65A" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M280 120 C310 90, 350 90, 380 120" stroke="#C43717" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M410 120 C440 90, 480 90, 510 120" stroke="#C43717" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <rect x="200" y="430" width="360" height="24" rx="12" fill="#E2562A"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#6F2D16">Dimsum Kukus Hangat</text>
+</svg>

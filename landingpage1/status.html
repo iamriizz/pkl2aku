@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Status Pesanan | KFC Online</title>
+  <meta name="description" content="Lacak status pesanan KFC Online berdasarkan nomor order." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header auth-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">KFC</span><span><strong>KFC Online</strong><small>Status pesanan</small></span></a>
+      <nav class="site-nav"><a href="index.html">Beranda</a><a href="index.html#menu">Menu</a><a href="checkout.html">Checkout</a><a href="admin.html">Admin</a></nav>
+      <div class="header-actions" id="auth-links"><span class="header-user hidden" id="header-user"></span><a class="btn btn-ghost hidden" id="logout-button" href="#">Keluar</a><a class="btn btn-ghost" id="login-link" href="login.html">Login</a><a class="btn btn-outline" id="register-link" href="register.html">Daftar</a></div>
+    </div>
+  </header>
+
+  <main class="status-page">
+    <section class="status-hero container">
+      <div>
+        <p class="overline">Order tracking</p>
+        <h1>Status Pesanan</h1>
+        <p>Lihat progres pesanan dari pembayaran, dapur, pickup atau pengiriman, sampai selesai.</p>
+      </div>
+      <form class="status-search" id="status-search-form">
+        <label for="order-search">Nomor pesanan</label>
+        <div><input id="order-search" type="search" placeholder="Contoh: KFC-123456" /><button class="btn btn-primary" type="submit">Cek</button></div>
+      </form>
+    </section>
+
+    <section class="container status-result" id="status-result"></section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="status.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KFC Online | Pesan Ayam Crispy, Bucket, Burger, dan Rice Box</title>
+  <meta name="description" content="Toko online KFC untuk pesan ayam crispy, bucket hemat, burger, rice box, minuman, dessert, promo, delivery, dan pickup outlet terdekat." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="KFC Online">
+        <span class="brand-mark">KFC</span>
+        <span><strong>KFC Online</strong><small>Order cepat, pickup atau delivery</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Buka navigasi" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+        <a href="#menu">Menu</a><a href="#promo">Promo</a><a href="#outlet">Outlet</a><a href="#tracking">Status</a><a href="#pesanan-saya">Pesanan Saya</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      </nav>
+      <div class="header-actions" id="auth-links">
+        <span class="header-user hidden" id="header-user"></span>
+        <a class="btn btn-ghost hidden" id="logout-button" href="#">Keluar</a>
+        <a class="btn btn-ghost" id="admin-login-link" href="#admin-login">Admin Login</a>
+        <a class="btn btn-ghost" id="login-link" href="login.html">Login</a>
+        <a class="btn btn-outline" id="register-link" href="register.html">Daftar</a>
+        <button class="cart-button" id="open-cart" aria-label="Buka keranjang"><span>Keranjang</span><strong id="cart-count">0</strong></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="overline">KFC online store</p>
+          <h1>Pesan KFC Favoritmu Lebih Cepat</h1>
+          <p class="hero-lead">Ayam crispy, bucket hemat, burger, rice box, dan promo spesial siap diantar atau diambil di outlet terdekat.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Pesan Sekarang</a>
+            <a class="btn btn-light" href="#promo">Lihat Promo</a>
+            <a class="btn btn-link" href="#outlet">Cari Outlet</a>
+          </div>
+          <div class="hero-stats" aria-label="Ringkasan layanan">
+            <div><strong>30m</strong><span>Estimasi delivery</span></div><div><strong>2</strong><span>Mode order</span></div><div><strong>24K+</strong><span>Order bulan ini</span></div>
+          </div>
+        </div>
+        <div class="hero-media" aria-label="Produk unggulan KFC">
+          <img src="assets/images/kfc-bucket.svg" alt="Bucket ayam crispy KFC" />
+          <div class="hero-offer"><span>Promo favorit</span><strong>Super Bucket Deal</strong><small>Mulai Rp 99.000</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-order" aria-label="Pencarian cepat">
+      <div class="container quick-order-inner">
+        <div class="search-box"><input id="menu-search" type="search" placeholder="Cari ayam, bucket, burger, rice box, minuman..." aria-label="Cari menu" /><button class="btn btn-primary" id="search-button">Cari</button></div>
+        <div class="quick-links"><a href="#menu">Ayam</a><a href="#menu">Bucket</a><a href="#menu">Burger</a><a href="#menu">Rice Box</a><a href="#promo">Promo</a></div>
+      </div>
+    </section>
+
+    <section class="section value-section" id="fitur">
+      <div class="container section-heading"><p class="overline">Cepat dan praktis</p><h2>Semua kebutuhan order KFC dalam satu halaman.</h2></div>
+      <div class="container value-grid">
+        <article class="value-card"><span>01</span><h3>Menu Lengkap</h3><p>Ayam, bucket, burger, rice box, snack, minuman, dessert, dan paket promo tersusun rapi.</p></article>
+        <article class="value-card"><span>02</span><h3>Delivery atau Pickup</h3><p>Pilih antar ke alamat atau ambil sendiri di outlet terdekat sesuai jadwalmu.</p></article>
+        <article class="value-card"><span>03</span><h3>Promo Jelas</h3><p>Label diskon, harga promo, stok, dan syarat pembelian ditampilkan sebelum checkout.</p></article>
+        <article class="value-card"><span>04</span><h3>Status Pesanan</h3><p>Ikuti proses dari pembayaran, disiapkan, siap diambil, sampai selesai.</p></article>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container section-heading split-heading"><div><p class="overline">Menu KFC</p><h2>Pilih menu favoritmu.</h2></div><p>Filter kategori, cek harga, pilih varian original atau spicy, lalu masukkan ke keranjang.</p></div>
+      <div class="container category-tabs" id="category-tabs"><button class="tab active" data-category="all">Semua</button><button class="tab" data-category="ayam">Ayam</button><button class="tab" data-category="bucket">Bucket</button><button class="tab" data-category="burger">Burger</button><button class="tab" data-category="rice-box">Rice Box</button><button class="tab" data-category="snack">Snack</button><button class="tab" data-category="minuman">Minuman</button><button class="tab" data-category="dessert">Dessert</button><button class="tab" data-category="promo">Promo</button></div>
+      <div class="container menu-list" id="menu-list"></div>
+    </section>
+
+    <section class="section promo-section" id="promo">
+      <div class="container promo-layout">
+        <div class="promo-copy"><p class="overline">Promo hari ini</p><h2>Bucket hemat untuk sendiri, keluarga, dan kantor.</h2><p>Promo aktif ditampilkan dengan harga final agar pelanggan bisa langsung pesan tanpa menebak total biaya.</p><a class="btn btn-light" href="#menu">Lihat Semua Promo</a></div>
+        <div class="promo-grid">
+          <article class="promo-card"><img src="assets/images/kfc-bucket.svg" alt="Super Bucket Deal" /><div><span class="promo-label">Hemat 25%</span><h3>Super Bucket Deal</h3><p>6 ayam crispy, 3 nasi, dan 3 minuman untuk makan ramai-ramai.</p><div class="promo-meta"><strong>Rp 129.000</strong><button class="btn btn-primary btn-sm" data-promoid="super-bucket">Pesan</button></div></div></article>
+          <article class="promo-card"><img src="assets/images/kfc-ricebox.svg" alt="Lunch Rice Box Deal" /><div><span class="promo-label">Lunch deal</span><h3>Rice Box Duo</h3><p>2 rice box spicy, 2 minuman, dan saus pilihan untuk makan siang cepat.</p><div class="promo-meta"><strong>Rp 58.000</strong><button class="btn btn-primary btn-sm" data-promoid="rice-duo">Pesan</button></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outlet-section" id="outlet">
+      <div class="container section-heading split-heading"><div><p class="overline">Outlet terdekat</p><h2>Pilih delivery atau pickup.</h2></div><p>Cari kota, lihat jam operasional, lalu gunakan outlet terdekat untuk estimasi order lebih akurat.</p></div>
+      <div class="container outlet-layout">
+        <div class="outlet-panel"><label for="city-search">Cari kota atau outlet</label><input id="city-search" type="search" placeholder="Contoh: Jakarta" /><div class="outlet-list" id="outlet-list"></div></div>
+        <div class="map-preview"><div class="map-grid"></div><div class="map-pin main-pin"></div><div class="map-pin second-pin"></div><div class="map-card"><strong>KFC Kemang</strong><span>Buka, delivery 25-35 menit</span></div></div>
+      </div>
+    </section>
+
+    <section class="section tracking-section" id="tracking">
+      <div class="container tracking-layout">
+        <div><p class="overline">Status pesanan</p><h2>Tracking dibuat sederhana dan mudah dipahami.</h2><p>Pelanggan dapat melihat nomor pesanan, estimasi waktu, dan progres dari pembayaran sampai pesanan selesai.</p></div>
+        <div class="tracking-stack">
+          <div class="status-timeline"><article class="done"><span></span><div><strong>Pembayaran Berhasil</strong><p>Pesanan dikirim ke outlet.</p></div></article><article class="active"><span></span><div><strong>Sedang Disiapkan</strong><p>Tim dapur menyiapkan ayam crispy dan paketmu.</p></div></article><article><span></span><div><strong>Dalam Pengiriman</strong><p>Kurir menuju alamat atau pesanan siap pickup.</p></div></article></div>
+          <div class="order-tracker-card" id="pesanan-saya">
+            <h3>Pesanan Saya</h3>
+            <p>Masukkan nomor pesanan untuk melihat status dan rincian pesanan Anda.</p>
+            <div class="search-box">
+              <input id="order-tracker-input" type="text" placeholder="Contoh: KFC-123456" />
+              <button class="btn btn-primary" id="track-order-button" type="button">Cek</button>
+            </div>
+            <div class="tracker-output" id="order-tracker-output"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section" id="akun">
+      <div class="container section-heading split-heading"><div><p class="overline">Akun dan reorder</p><h2>Belanja berikutnya lebih cepat.</h2></div><p>Riwayat pesanan, alamat tersimpan, voucher, dan fitur pesan lagi membantu repeat order.</p></div>
+      <div class="container article-grid"><article class="article-card"><span>Riwayat</span><h3>Pesan Lagi</h3><p>Ambil pesanan favorit dari histori dan masukkan kembali ke keranjang.</p></article><article class="article-card"><span>Voucher</span><h3>Promo Member</h3><p>Simpan voucher gratis ongkir, bucket hemat, atau lunch deal.</p></article><article class="article-card"><span>Alamat</span><h3>Delivery Lebih Cepat</h3><p>Alamat rumah dan kantor bisa dipilih ulang saat checkout.</p></article></div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container section-heading"><p class="overline">FAQ</p><h2>Pertanyaan yang sering diajukan.</h2></div>
+      <div class="container faq-grid"><article class="faq-item"><button class="faq-question">Bagaimana cara memesan?</button><div class="faq-answer">Pilih menu, atur varian, tambahkan ke keranjang, lalu lanjut ke checkout.</div></article><article class="faq-item"><button class="faq-question">Apakah bisa pickup?</button><div class="faq-answer">Bisa. Di checkout pilih Pickup, lalu pilih outlet dan jam pengambilan.</div></article><article class="faq-item"><button class="faq-question">Metode pembayaran apa saja?</button><div class="faq-answer">COD, transfer bank, QRIS, dan e-wallet dapat disiapkan sesuai kebutuhan toko.</div></article><article class="faq-item"><button class="faq-question">Apakah promo bisa digabung?</button><div class="faq-answer">Promo mengikuti syarat dan ketentuan masing-masing voucher atau paket.</div></article></div>
+    </section>
+
+    <section class="section contact-section" id="kontak">
+      <div class="container contact-layout"><div><p class="overline">Kontak</p><h2>Butuh bantuan order?</h2><p>Hubungi layanan pelanggan untuk informasi outlet, pembayaran, atau status pesanan.</p></div><div class="contact-grid"><article class="contact-card"><span>Customer Care</span><strong>14022</strong></article><article class="contact-card"><span>Jam Layanan</span><strong>09.00 - 22.00 WIB</strong></article><article class="contact-card"><span>Layanan</span><strong>Pesanan langsung di website</strong></article></div></div>
+    </section>
+  </main>
+
+  <section class="section admin-section hidden" id="admin-section">
+    <div class="container">
+      <div class="admin-shell">
+        <aside class="admin-sidebar">
+          <div class="admin-brand">
+            <span class="brand-mark">KFC</span>
+            <div><strong>Admin Panel</strong><small>Kelola pesanan & menu</small></div>
+          </div>
+          <nav class="admin-nav">
+            <button class="admin-nav-btn active" data-admin-view="dashboard" type="button">Dashboard</button>
+            <button class="admin-nav-btn" data-admin-view="orders" type="button">Daftar Pesanan</button>
+            <button class="admin-nav-btn" data-admin-view="menu" type="button">Kelola Menu</button>
+            <button class="admin-nav-btn" data-admin-view="status" type="button">Kelola Status Pesanan</button>
+          </nav>
+        </aside>
+        <div class="admin-main">
+          <div class="admin-topbar">
+            <div><p class="overline">Panel Admin</p><h2 id="admin-title">Dashboard Admin</h2></div>
+            <button class="btn btn-outline" id="admin-logout-button" type="button">Logout</button>
+          </div>
+          <div id="admin-auth-card" class="admin-auth-card">
+            <h3>Admin Login</h3>
+            <p>Masuk dengan akun admin untuk mengelola pesanan dan menu.</p>
+            <div id="admin-login-alert"></div>
+            <form id="admin-login-form">
+              <label for="admin-username">Username</label>
+              <input id="admin-username" name="admin_username" type="text" required />
+              <label for="admin-password">Password</label>
+              <input id="admin-password" name="admin_password" type="password" required />
+              <button type="submit" class="btn btn-primary full-width">Login</button>
+            </form>
+          </div>
+          <div id="admin-dashboard-view" class="admin-view hidden">
+            <div class="admin-summary-grid">
+              <article class="admin-stat-card"><strong id="admin-stat-orders">0</strong><span>Pesanan</span></article>
+              <article class="admin-stat-card"><strong id="admin-stat-pending">0</strong><span>Menunggu Konfirmasi</span></article>
+              <article class="admin-stat-card"><strong id="admin-stat-completed">0</strong><span>Selesai</span></article>
+            </div>
+            <div class="admin-panel-card">
+              <h3>Daftar Pesanan</h3>
+              <div id="admin-orders-list"></div>
+            </div>
+          </div>
+          <div id="admin-view-orders" class="admin-view hidden">
+            <div class="admin-panel-card">
+              <h3>Daftar Pesanan</h3>
+              <div id="admin-orders-list-secondary"></div>
+            </div>
+          </div>
+          <div id="admin-view-menu" class="admin-view hidden">
+            <div class="admin-panel-card">
+              <h3>Kelola Menu</h3>
+              <form id="admin-menu-form" class="admin-form">
+                <div class="admin-form-row">
+                  <div>
+                    <label for="admin-menu-name">Nama Menu</label>
+                    <input id="admin-menu-name" name="menu_name" type="text" required />
+                  </div>
+                  <div>
+                    <label for="admin-menu-category">Kategori</label>
+                    <select id="admin-menu-category" name="menu_category">
+                      <option value="ayam">Ayam</option>
+                      <option value="bucket">Bucket</option>
+                      <option value="burger">Burger</option>
+                      <option value="rice-box">Rice Box</option>
+                      <option value="snack">Snack</option>
+                      <option value="minuman">Minuman</option>
+                      <option value="dessert">Dessert</option>
+                      <option value="promo">Promo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="admin-form-row">
+                  <div>
+                    <label for="admin-menu-price">Harga</label>
+                    <input id="admin-menu-price" name="menu_price" type="number" min="1000" required />
+                  </div>
+                  <div>
+                    <label for="admin-menu-image">Gambar</label>
+                    <input id="admin-menu-image" name="menu_image" type="text" placeholder="assets/images/kfc-bucket.svg" />
+                  </div>
+                </div>
+                <label for="admin-menu-desc">Deskripsi</label>
+                <textarea id="admin-menu-desc" name="menu_desc" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary">Tambah Menu</button>
+              </form>
+              <div id="admin-menu-list"></div>
+            </div>
+          </div>
+          <div id="admin-view-status" class="admin-view hidden">
+            <div class="admin-panel-card">
+              <h3>Kelola Status Pesanan</h3>
+              <div id="admin-status-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="footer-brand" href="#home">KFC Online</a><p>Toko online untuk menu, promo, outlet, delivery, pickup, checkout, dan status pesanan.</p></div><div><strong>Navigasi</strong><a href="#menu">Menu</a><a href="#promo">Promo</a><a href="#outlet">Outlet</a><a href="#tracking">Status</a></div><div><strong>Bantuan</strong><a href="#faq">FAQ</a><a href="#kontak">Kontak</a><a href="checkout.html">Checkout</a></div></div><div class="container footer-bottom">Copyright 2026 KFC Online. Gunakan aset resmi untuk publikasi produksi.</div></footer>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true"><div class="drawer-header"><h2>Keranjang Anda</h2><button class="close-drawer" id="close-cart" aria-label="Tutup keranjang">×</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-footer"><div class="drawer-total"><span>Total</span><strong id="cart-total">Rp 0</strong></div><button class="btn btn-primary full-width" id="checkout-button">Checkout</button></div></aside>
+
+  <div class="modal hidden" id="order-modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="close-modal" aria-label="Tutup pilihan menu">×</button><div class="modal-content"><div class="modal-image"><img id="modal-image" src="" alt="" /></div><div class="modal-info"><span class="menu-badge" id="modal-category">Kategori</span><h3 id="modal-title">Nama Menu</h3><p id="modal-desc">Deskripsi menu</p><div class="modal-meta"><span id="modal-rating">Rating 4.9</span><strong id="modal-price">Rp 0</strong></div><form id="order-form"><label for="qty-input">Jumlah</label><div class="quantity-control"><button type="button" id="qty-decrease">-</button><input type="number" id="qty-input" value="1" min="1" /><button type="button" id="qty-increase">+</button></div><label for="spice-level">Varian</label><select id="spice-level" required><option value="Original">Original</option><option value="Spicy">Spicy</option><option value="Mix Original & Spicy">Mix Original & Spicy</option></select><label for="sauce-option">Side / Minuman</label><select id="sauce-option" required><option value="Nasi">Nasi</option><option value="French Fries">French Fries</option><option value="Cola">Cola</option><option value="Mineral Water">Mineral Water</option><option value="Tanpa Side">Tanpa Side</option></select><label for="order-note">Catatan</label><textarea id="order-note" rows="3" placeholder="Contoh: saus dipisah, pickup jam 18.00"></textarea><button type="submit" class="btn btn-primary full-width">Tambah ke Keranjang</button></form></div></div></div></div>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

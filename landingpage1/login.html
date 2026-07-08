@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | KFC Online</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header auth-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a class="brand" href="index.html">KFC Online</a>
+        <span class="brand-tag">Order cepat • Delivery • Pickup</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#promo">Promo</a>
+        <a href="index.html#tracking">Status</a>
+        <a href="index.html#outlet">Outlet</a>
+      </nav>
+      <div class="header-actions" id="auth-links">
+        <span class="header-user hidden" id="header-user"></span>
+        <a class="btn btn-outline hidden" id="logout-button" href="#">Keluar</a>
+        <a class="btn btn-outline" id="login-link" href="login.html">Login</a>
+        <a class="btn btn-outline" id="register-link" href="register.html">Daftar</a>
+      </div>
+    </div>
+  </header>
+  <main class="auth-page">
+    <section class="auth-card">
+      <h1>Masuk</h1>
+      <p>Silakan masuk untuk melanjutkan ke halaman Checkout.</p>
+      <div id="login-alert"></div>
+      <form id="login-form">
+        <input type="hidden" id="login-redirect" name="redirect" value="index.html" />
+        <label for="identifier">Email atau Nama Pengguna</label>
+        <input id="identifier" name="identifier" type="text" required />
+        <label for="password">Kata Sandi</label>
+        <input id="password" name="password" type="password" required />
+        <button type="submit" class="btn btn-primary full-width">Login</button>
+      </form>
+      <p class="auth-note">Belum punya akun? <a href="register.html">Daftar sekarang</a></p>
+      <p class="auth-note"><a href="index.html">Kembali ke beranda</a></p>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

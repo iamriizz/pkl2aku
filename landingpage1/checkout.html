@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | KFC Online</title>
+  <meta name="description" content="Checkout toko online KFC untuk delivery atau pickup." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header auth-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KFC Online"><span class="brand-mark">KFC</span><span><strong>KFC Online</strong><small>Checkout order</small></span></a>
+      <nav class="site-nav"><a href="index.html">Beranda</a><a href="index.html#menu">Menu</a><a href="index.html#promo">Promo</a><a href="index.html#outlet">Outlet</a></nav>
+      <div class="header-actions" id="auth-links"><span class="header-user hidden" id="header-user"></span><a class="btn btn-ghost hidden" id="logout-button" href="#">Keluar</a><a class="btn btn-ghost" id="login-link" href="login.html">Login</a><a class="btn btn-outline" id="register-link" href="register.html">Daftar</a></div>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+    <section class="checkout-card">
+      <div class="checkout-header-row">
+        <div>
+          <p class="overline">Checkout</p>
+          <h1>Selesaikan Pesanan</h1>
+          <p>Periksa kembali menu, alamat atau outlet, dan metode pembayaran sebelum konfirmasi.</p>
+        </div>
+        <a class="btn btn-outline" href="index.html#menu">Belanja Lagi</a>
+      </div>
+
+      <div class="checkout-grid">
+        <div>
+          <div class="checkout-summary">
+            <h3>Ringkasan Pesanan</h3>
+            <div id="checkout-content"></div>
+          </div>
+          <div class="order-status-card">
+            <h3>Status setelah checkout</h3>
+            <p>Nomor pesanan dibuat otomatis, lalu status dimulai dari Menunggu Pembayaran atau Pesanan Diterima.</p>
+          </div>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+          <h3>Data Pemesanan</h3>
+          <label>Jenis Order</label>
+          <div class="order-type-toggle">
+            <label><input type="radio" name="order_type" value="Delivery" checked /> Delivery</label>
+            <label><input type="radio" name="order_type" value="Pickup" /> Pickup</label>
+          </div>
+          <label for="checkout-name">Nama</label>
+          <input id="checkout-name" name="name" type="text" required />
+          <label for="checkout-phone">Nomor HP</label>
+          <input id="checkout-phone" name="phone" type="tel" required />
+          <label for="checkout-address">Alamat / Catatan Pickup</label>
+          <textarea id="checkout-address" name="address" rows="3" placeholder="Alamat delivery atau catatan pickup" required></textarea>
+          <label for="checkout-outlet">Outlet</label>
+          <select id="checkout-outlet" name="outlet" required>
+            <option value="KFC Kemang">KFC Kemang</option>
+            <option value="KFC Dago">KFC Dago</option>
+            <option value="KFC Summarecon Bekasi">KFC Summarecon Bekasi</option>
+            <option value="KFC Margonda">KFC Margonda</option>
+          </select>
+          <label for="checkout-time">Waktu</label>
+          <select id="checkout-time" name="time" required>
+            <option value="Secepatnya">Secepatnya</option>
+            <option value="12.00 - 13.00">12.00 - 13.00</option>
+            <option value="18.00 - 19.00">18.00 - 19.00</option>
+            <option value="19.00 - 20.00">19.00 - 20.00</option>
+          </select>
+          <label for="promo-code">Kode Promo</label>
+          <input id="promo-code" name="promo" type="text" placeholder="Contoh: KFCHEMAT" />
+          <label for="payment-method">Metode Pembayaran</label>
+          <select id="payment-method" name="payment_method" required>
+            <option value="QRIS">QRIS</option>
+            <option value="E-Wallet">E-Wallet</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="COD">COD</option>
+          </select>
+          <button type="submit" class="btn btn-primary full-width">Buat Pesanan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
