@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Luma Wear monochrome logo</title>
+  <desc id="desc">Minimal black and white Luma Wear logo with a clean bow and dress silhouette icon plus refined serif wordmark on transparent background.</desc>
+  <g fill="none" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M210 141 C190 170 169 203 151 238 C133 273 121 309 114 346 C145 365 178 375 211 375 C244 375 277 365 308 346 C301 309 289 273 271 238 C253 203 231 170 210 141 Z" fill="none" stroke-width="9" />
+    <path d="M178 155 C190 176 199 195 210 218 C221 195 230 176 242 155" stroke-width="7" />
+    <path d="M145 191 C166 179 190 174 210 218 C230 174 254 179 275 191" stroke-width="5" />
+    <path d="M113 126 C143 91 181 91 210 136 C179 151 144 153 113 126 Z" fill="none" stroke-width="8" />
+    <path d="M307 126 C277 91 239 91 210 136 C241 151 276 153 307 126 Z" fill="none" stroke-width="8" />
+    <circle cx="210" cy="136" r="18" fill="#FFFFFF" stroke-width="8" />
+    <path d="M210 154 L210 238" stroke-width="6" />
+    <path d="M100 351 C151 387 269 387 320 351" stroke-width="10" />
+  </g>
+
+  <g fill="#111111">
+    <text x="390" y="204" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="118" font-weight="500" letter-spacing="10">LUMA</text>
+    <text x="397" y="282" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="68" font-weight="400" letter-spacing="16">WEAR</text>
+    <path d="M396 314 H782" stroke="#111111" stroke-width="6" stroke-linecap="round" />
+    <path d="M805 314 C825 294 846 294 866 314 C846 334 825 334 805 314 Z" fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="round" />
+    <path d="M875 314 C895 294 916 294 936 314 C916 334 895 334 875 314 Z" fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="round" />
+    <circle cx="870" cy="314" r="8" fill="#111111" />
+  </g>
+</svg>
